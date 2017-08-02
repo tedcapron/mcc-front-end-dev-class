@@ -21,7 +21,7 @@ a {
   color:rbga:255,1,1,90%;
 }
 a:hover {
-  color:lightgreen;
+  color:red;
 }
 
 
@@ -89,7 +89,7 @@ color:white;
   
 }
 
-.pimg1, .pimg2, .pimg3{
+.pimg1, .pimg2, .pimg3 pimg4{
   position:relative;
   opacity:0.70;
   background-position:center;
@@ -115,6 +115,10 @@ color:white;
 
 .pimg3{
   background-image:url("images/image2.jpeg");
+  min-height:400px;
+}
+pimg4{
+  background-image:url("images/image1.jpeg");
   min-height:400px;
 }
 
