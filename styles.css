@@ -66,7 +66,7 @@ ul.skills {
   list-style-type: none;
   border-radius: 90px;
   background:lightblue;
-  color:black;
+  color:pink;
   padding: 5px 30px;
   margin: 12px;
   border-width: 2 solid;
@@ -87,9 +87,11 @@ color:white;
    box-shadow: 1px 2px 14px rgba(0, 0, 0, .5);
 
   
-}
+ }
+ 
 
-.pimg1, .pimg2, .pimg3 pimg4{
+
+.pimg1, .pimg2, .pimg3, .pimg4{
   position:relative;
   opacity:0.70;
   background-position:center;
@@ -117,8 +119,8 @@ color:white;
   background-image:url("images/image2.jpeg");
   min-height:400px;
 }
-pimg4{
-  background-image:url("images/image1.jpeg");
+.pimg4{
+  background-image:url("images/image4.jpeg");
   min-height:400px;
 }
 
