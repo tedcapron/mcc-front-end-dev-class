@@ -86,7 +86,7 @@ header .profile-image:hover {
   margin: 10px auto;
 } 
 .location {
-  background-color: #222;
+  background-color: black;
   color: yellow;
 }
 .card {
@@ -95,7 +95,7 @@ header .profile-image:hover {
   max-width: 500px;
   text-align: center;
   background:black;
-  border-bottom: 4px darkgray;
+  border-bottom: 4px;
   border-radius: 6px;
   transition: all .5s;
 }
