@@ -78,12 +78,19 @@ header h1,
 header nav {
   text-align: center;
 }
-
-main {
-  padding: 20px;
-  border: 1px solid #ddd;
-  margin: 30px auto 0 auto;
-  width: 500px;
+  
+img li {
+  list-style-type: none;
+  padding-left: 11px;
+  padding-top: 30px;
 }
 
+.photos img {
+}
+
+.boxwin {
+display: inline-block;
+border: 3 solid red; 
+box-sizing: 500px 200px;
+background-image: linear-gradient(to bottom, blue , white );
 }
