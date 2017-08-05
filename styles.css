@@ -14,21 +14,32 @@ body {
 }
 
 a {
-  text-decoration: none;
-  color: black;
+  color: white;
+}
+a li{
+    text-decoration: none;
+
 }
 
 a:hover {
   color: red;
 }
+a:active
+{
+    color: #aca;
+    border-left: 2px solid #030;
+    border-top: 2px solid #030;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-radius: 30px;
+    padding: 0 30;
+}
 
 .grad {
   box-shadow: 10px 20px 14px rgba(0, 0, 99, .5);
   margin: 20px;
-  background-image: url("images/mesh.jpeg");
   min-height: 400px;
   position: relative;
-  opacity: 0.70;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -47,6 +58,8 @@ a:hover {
   transition: all .5s;
   display: inline-block;
   margin-top: 30px;
+    text-decoration: none;
+
 }
 
 .card:hover {
@@ -69,15 +82,14 @@ ul.skills {
 .skills li {
   list-style-type: none;
   border-radius: 90px;
-  color: pink;
-  padding: 5px 30px;
+  padding: 8px 30px 5px 30px;
   margin: 12px;
   border-width: 2 solid;
   font-size: x-large;
-  border-bottom-color: lightcyan;
-  padding-top: 10px;
   box-shadow: 1px 2px 14px rgba(0, 0, 0, .5);
-  background-image: linear-gradient(to top, blue, white);
+  background-image: linear-gradient(to top, black,lightgray );
+
+  
 }
 
 .skills li:hover {
@@ -86,7 +98,7 @@ ul.skills {
 
 .pic {
   display: inline-block;
-  border: 3px solid lightblue;
+  border: 3px solid black;
   box-shadow: 1px 2px 14px rgba(0, 0, 0, .5);
   x
 }
@@ -107,10 +119,7 @@ ul.skills {
   background-attachment: fixed;
 }
 
-.pimg1 {
-  background-image: url("images/image1.jpeg");
-  min-height: 100%;
-}
+
 
 .pimg2 {
   background-image: url("images/image3.jpg");
@@ -118,7 +127,7 @@ ul.skills {
 }
 
 .pimg3 {
-  background-image: url("images/image2.jpeg");
+  background-image: url("images/devices.jpg");
   min-height: 400px;
 }
 
