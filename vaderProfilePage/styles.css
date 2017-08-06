@@ -81,13 +81,14 @@ header .profile-image:hover {
   background-color: black;
   color: yellow;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 5px ;
   display: table;
   margin: 10px auto;
 } 
 .location {
   background-color: black;
   color: yellow;
+  perspective: 100px;
 }
 .card {
   margin: 30px;

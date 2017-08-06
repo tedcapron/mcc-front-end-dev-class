@@ -143,6 +143,7 @@ ul.skills {
 
 .section-white {
   background-color: lightgray color: black;
+  border: 2px solid black; 
 }
 
 .section-light {
@@ -185,6 +186,6 @@ ul.skills {
   .pimg1,
   .pimg2,
   .pimg3 {
-    background-attachment: fixed;
+    background-attachment: scroll;
   }
 }
