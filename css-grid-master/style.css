@@ -1,0 +1,77 @@
+html,
+body {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Molengo, sans-serif;
+}
+
+.item {
+  outline: 1px solid black;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+}
+
+/* Row-Column Example */
+.row-column {
+  grid-template-columns: 40px 50px 1fr 50px 40px;
+  grid-template-rows: .25fr 100px .75fr;
+}
+
+.row-column .item:nth-child(2n) {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+
+.row-column .item:nth-child(2n + 1) {
+  background-color: rgba(202, 96, 96, 0.5);
+}
+
+/* Area Example */
+
+.areas > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.header {
+  background-color: cadetblue;
+}
+
+.sidebar {
+  background-color: darksalmon;
+}
+
+.main {
+  background-color: wheat;
+}
+
+.footer {
+  background-color: mistyrose;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Form Example */
+
+.user-buttons > button {
+  background-color: darkred;
+  color: #fff;
+  border: 1px solid grey;
+  padding: 0.5em 1.25em;
+  border-radius: 5px;
+}
+
+input[type="text"] {
+  font-size: 1.5em;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 0.5px solid grey;
+}

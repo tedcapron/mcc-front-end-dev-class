@@ -38,14 +38,26 @@ img {
    Base Layout Styles 
 ======================== */
 
+/* Header */
+header {
+  padding: 0.5em 0;
+}
+
 /* Navigation  */
 .name {
   font-size: 1.25em;
+  margin: 0;
+}
+
+nav {
+  margin-top: 0.25em;
 }
 
 .name a,
 nav a {
   text-align: center;
+  display: block;
+  padding: 0.5em 1em;
 }
 
 nav a {
@@ -63,6 +75,13 @@ nav a:hover {
 .banner {
   color: #fff;
   background: #3acec2;
+  text-align: center;
+  padding: 3.2em 0;
+  margin-bottom: 4em;
+}
+
+main {
+  padding: 1em;
 }
 
 /* Page Elements */
@@ -70,9 +89,73 @@ nav a:hover {
   width: 190px;
 }
 
+.headline {
+  margin-bottom: 0;
+}
+
 /* Footer */
 footer {
   text-align: center;
   padding: 2em 1em;
   background: #d9e4ea;
+}
+
+/* ==============================
+   Media Queries
+   ============================== */
+@media (min-width: 48em) {
+  main,
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  header .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .tagline {
+    font-size: 1.4em;
+  }
+
+  /* Columns */
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .welcome,
+  .food {
+    flex-basis: 50%;
+  }
+
+  .welcome {
+    padding-right: 1em;
+  }
+}
+
+@media (min-width: 64em) {
+  .welcome,
+  .directions {
+    flex-basis: 30%;
+  }
+
+  .directions {
+    padding-left: 1em;
+  }
+
+  .food {
+    flex-basis: 40%;
+  }
+
+  main {
+    flex-wrap: initial;
+  }
 }
