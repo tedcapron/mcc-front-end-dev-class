@@ -11,6 +11,7 @@ body {
   display: grid;
   height: 100vh;
   padding: 2em;
+  padding-top: 1em;
 }
 
 /* Row-Column Example */
@@ -143,4 +144,11 @@ label[for="address"] {
   max-height: 3em;
   padding-top: 2em;
 }
-.department ul{ border: 2px solid black;}
+.department ul{ border: 2px solid black;
+padding: 1em;
+margin-left: 1em; 
+list-style-type: none;
+}
+.department h2{
+margin-left: 1em;
+}

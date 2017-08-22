@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            /* many can be made by repeat(3, 1fr) */
+            grid-gap: 1em;
+            /* column or row can be done by grid-row-gap */
+            grid-auto-rows: minmax(100px , auto);
+
+        }
+        .wrapper > div {
+            background: #eee;
+            padding: 1em;
+        }
+
+        .wrapper>div:nth-child(odd) {
+            background: #ddd;
+            }
+            .box1{
+                grid-column: 1/3;
+                grid-row: 1/3 
+            }
+            .box2{
+                gid-column: 3;
+                gid-row: 1/3;
+            }
+            .box3{
+                grid-column: 2/4;
+                grid-row: 3;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>css grid</h1>
+    <div class="wrapper">
+        <div class="box1">
+
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit placeat ipsum animi sunt rem nisi, facere iste
+                fugiat vitae eveniet. Sunt optio voluptate atque sapiente aperiam laudantium impedit rerum placeat!
+            </p>
+
+
+        </div>
+        <div class="box2">
+
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit placeat ipsum animi sunt rem nisi, facere iste
+                fugiat vitae eveniet. Sunt optio voluptate atque sapiente aperiam laudantium impedit rerum placeat!
+            </p>
+
+
+        </div>
+        <div class="box3">
+
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit placeat ipsum animi sunt rem nisi, facere iste
+                fugiat vitae eveniet. Sunt optio voluptate atque sapiente aperiam laudantium impedit rerum placeat!
+            </p>
+
+
+        </div>
+        <div class="box4">
+
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit placeat ipsum animi sunt rem nisi, facere iste
+                fugiat vitae eveniet. Sunt optio voluptate atque sapiente aperiam laudantium impedit rerum placeat!
+            </p>
+
+
+        </div>
+        <div>
+
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit placeat ipsum animi sunt rem nisi, facere iste
+                fugiat vitae eveniet. Sunt optio voluptate atque sapiente aperiam laudantium impedit rerum placeat!
+            </p>
+
+
+        </div>
+        <div>
+
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit placeat ipsum animi sunt rem nisi, facere iste
+                fugiat vitae eveniet. Sunt optio voluptate atque sapiente aperiam laudantium impedit rerum placeat!
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
