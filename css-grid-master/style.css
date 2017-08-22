@@ -97,7 +97,7 @@ input[type="text"] {
 }
 
 .form {
-  text-align:justify;
+  width: 800px;
   height: 450px;
   border: 2px solid black;
   grid-template-columns: min-content min-content 1fr;
