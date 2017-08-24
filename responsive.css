@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    background: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #6633ff;
+}
+
+.main-nav {
+    width: 100%;
+    background: white;
+    min-height: 1em;
+    padding: 0em ;
+    text-align: center;
+}
+
+.nav {
+    display: block;
+    justify-content:space-between;
+    font-weight: 700;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0em;
+}
+
+.nav .name {
+    display: block;
+    margin-right: auto;
+    color: black;
+}
+
+.nav li {
+    padding: 5px 2px 1px 20px;
+}
+
+.nav a {
+    transition: all .5s;
+}
+
+.nav a:hover {
+    color: blue;
+}
+
+.port-image {
+    width: 300px;
+}
+.bioselfie{
+    display: flex-wrap;
+    padding-top: 3em;
+
+}
+.textwrap {
+    display: grid ;
+    width: 300px;
+    height: auto;
+    justify-content: space-around;
+    
+}
+
+.wrapper {
+    display: grid;
+    padding-top: 3em;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+    .bioselfie {
+        display: grid;
+        padding-top: 3em;
+    }
+    .bio{
+        grid-column: 1/3;
+    }
+    .selfie
+    {
+    border: 2px solid white; 
+    grid-column: 3;
+    }
+    .textwrap{
+        padding-left: 3em;
+    }
+    .nav{display: flex;
+    padding-left: 3em ;
+    padding-right: 3em;
+    }
+    
+}
+
+h1 {
+    display: block;
+}
+
+@media screen and (min-width:1024px) {
+    .wrapper {
+
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+    }
+    .bioselfie {
+        display: grid;
+        padding-top: 3em;
+    }
+    .bio{
+        grid-column: 1/3;
+    }
+    .selfie
+    {
+    /* border: 2px solid white;  */
+    grid-column: 3;
+    }
+    .textwrap{
+        padding-left: 5em;
+    }
+    .nav{display: flex}
+}
