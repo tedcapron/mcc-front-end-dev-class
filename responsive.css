@@ -65,6 +65,7 @@ a:hover {
 }
 .textwrap {
     display: grid ;
+    padding-left: 5em;
     width: 300px;
     height: auto;
     justify-content: space-around;
