@@ -1,0 +1,193 @@
+/* Browser Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Base element styles */
+body {
+  font-family: 'Varela Round', sans-serif;
+  line-height: 1.6;
+  color: #3a3a3a;
+}
+
+p {
+  font-size: 0.95em;
+  margin-bottom: 1.8em;
+}
+
+h2,
+h3,
+a {
+  color: #093a58;
+}
+
+h2,
+h3 {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+  line-height: 0;
+  position: relative;
+}
+
+figcaption {
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #fff;
+  padding: 1em;
+  background: rgba(19, 43, 102, 0.85);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* =======================
+   Base Layout Styles 
+======================== */
+
+/* Header */
+header {
+  padding: 0.5em 0;
+}
+
+/* Navigation  */
+.name {
+  font-size: 1.25em;
+  margin: 0;
+}
+
+nav {
+  margin-top: 0.25em;
+}
+
+.name a,
+nav a {
+  text-align: center;
+  display: block;
+  padding: 0.5em 1em;
+}
+
+nav a {
+  font-size: 0.95em;
+  color: #3acec2;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: #093a58;
+}
+
+/* Layout Containers */
+
+.banner {
+  color: #fff;
+  background: #3acec2;
+  text-align: center;
+  padding: 3.2em 0;
+  margin-bottom: 4em;
+}
+
+main {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 2em;
+}
+
+/* Page Elements */
+.logo {
+  width: 190px;
+}
+
+.headline {
+  margin-bottom: 0;
+}
+
+.icon-location {
+  width: 3em;
+  position: absolute;
+  top: -1em;
+  right: -1em;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2em 1em;
+  background: #d9e4ea;
+}
+
+/* ==============================
+   Media Queries
+   ============================== */
+@media (min-width: 48em) {
+  body {
+    padding-top: 4.25em;
+  }
+
+  header {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    top: 0;
+    z-index: 2;
+  }
+
+  .name a {
+    text-align: start;
+  }
+
+  main,
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .directions {
+    grid-column: span 2;
+  }
+
+  header .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav {
+    display: grid;
+    justify-self: end;
+    grid-template-columns: repeat(4, max-content);
+  }
+
+  nav a {
+    align-self: center;
+  }
+
+  .tagline {
+    font-size: 1.4em;
+  }
+}
+
+@media (min-width: 64em) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .directions {
+    grid-column: span 1;
+  }
+}

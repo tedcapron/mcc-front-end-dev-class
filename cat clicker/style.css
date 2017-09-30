@@ -1,0 +1,159 @@
+body {
+  background-color: rgb(0, 0, 0);
+  box-sizing: border-box;
+  color: #F8F3F3;
+}
+
+h1 {
+  text-shadow: 2px 12px #850909;
+  text-align: center;
+  color: red;
+  font-size: 2em;
+}
+
+h3 {
+  text-align: center;
+  color: red;
+}
+
+.bg1 {
+  width: 125px;
+  height: 125px;
+  float: right;
+}
+
+.bg2 {
+  width: 125px;
+  height: 125px;
+  float: left;
+  align-content: top;
+}
+.ring {
+  background-image: url("img/ring.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #0F0F0F;
+  height: 40vw;
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 60%;
+  position: absolute;
+  bottom: -40px;
+  display: inline-flex;
+  
+}
+
+#boxer {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  animation-name: kitty;
+  animation-duration: 9s;
+}
+
+@keyframes kitty {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 150%;
+    ;
+    top: 0px;
+  }
+  50% {
+    left: 150%;
+    top: 0px;
+  }
+  75% {
+    left: 95%;
+    top: 0px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+#boxer2 {
+  margin: 0, auto;
+  left: 32px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  animation-name: kitty2;
+  animation-duration: 10s;
+}
+
+@keyframes kitty2 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  25% {
+    left: -140%;
+    ;
+    top: 0px;
+  }
+  50% {
+    left: -140%;
+    top: 0px;
+  }
+  75% {
+    left: -120%;
+    top: 0px;
+  }
+  100% {
+    left: 0%;
+    top: 0px;
+  }
+}
+
+#bell {
+  margin: 0 auto;
+}
+
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.kat1 {
+  width: 45%;
+}
+
+.kat2 {
+  width: 100%;
+  margin-left: 627px;
+}
+
+
+.champ {
+  text-align: center;
+  width: 30%;
+  background-image: url("img/trophy.png");
+  font-size: 14px;
+  color: #000;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: 160px;
+}
+
+.challenger {
+  text-align: left;
+  width: 300px;
+  padding-top: 35px;
+  padding-left: 10px;
+}
+
+select {
+  font-size: 1.5em;
+}
+
+#meow {
+  color: #000;
+}
