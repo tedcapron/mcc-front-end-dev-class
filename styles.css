@@ -10,11 +10,11 @@ body {
   text-align: center;
   font-family: Courier New, Courier, monospace;
   color: black;
-  background-color: lightgray;
+  background-color:#A68084;
 }
 
 a {
-  color: white;
+  color:#CDD5DB;
 }
 a li{
     text-decoration: none;
@@ -57,8 +57,9 @@ a:active
   border-radius: 6px;
   transition: all .5s;
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 60px;
     text-decoration: none;
+    padding-bottom: 80px;
 
 }
 
@@ -82,12 +83,12 @@ ul.skills {
 .skills li {
   list-style-type: none;
   border-radius: 90px;
-  padding: 8px 30px 5px 30px;
+  padding: 15px 30px 25px 30px;
   margin: 12px;
   border-width: 2 solid;
   font-size: x-large;
   box-shadow: 1px 2px 14px rgba(0, 0, 0, .5);
-  background-image: linear-gradient(to top, black,lightgray );
+  background-image: linear-gradient(to top,#808080, #CDD5DB );
 
   
 }
@@ -100,13 +101,14 @@ ul.skills {
   display: inline-block;
   border: 3px solid black;
   box-shadow: 1px 2px 14px rgba(0, 0, 0, .5);
-  x
+  
 }
 
 .pimg1,
 .pimg2,
 .pimg3,
-.pimg4 {
+.pimg4, 
+.pimg5{
   position: relative;
   opacity: 0.70;
   background-position: center;
@@ -135,7 +137,10 @@ ul.skills {
   background-image: url("images/image4.jpeg");
   min-height: 400px;
 }
-
+.pimg5 {
+  background-image: url("images/image5.jpg");
+   min-height: 400px;
+}
 .section {
   text-align: center;
   padding: 50px 80px;

@@ -1,3 +1,5 @@
+alert("select a challenger with the drop down menu . click on the bell to get it to ring .  click on your favorite to make it the champion");
+
 document.getElementById("bell").addEventListener("click", ringBell);
 
 function ringBell() {
