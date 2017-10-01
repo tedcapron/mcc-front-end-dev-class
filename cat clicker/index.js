@@ -25,8 +25,6 @@ function cheer() {
 }
 var c = 1
 
-alert("unlike life you get to choose the winners here. click on your choice for best cat. pick more from the drop down menu ")
-
 // Model
 const model = {
   currentCat: null,
