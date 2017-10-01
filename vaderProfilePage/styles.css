@@ -93,6 +93,7 @@ header .profile-image:hover {
 .card {
   margin: 30px;
   padding: 20px 40px 40px;
+  min-width:450px;
   max-width: 500px;
   text-align: center;
   background:black;
