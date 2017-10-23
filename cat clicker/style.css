@@ -157,3 +157,30 @@ select {
 #meow {
   color: #000;
 }
+
+/* //mobile setting// */
+@media screen and (max-width: 480px) {
+  body {display: block;
+      background-color: lightgreen;
+  }
+  .bg1,
+  .bg2{
+    color: #000;
+  }
+  .ring{
+  width: 95%;
+  }
+  #boxer,
+  #boxer2{
+    width: 25%;
+  }
+  #bell{
+    bottom: 0px;
+
+  }
+  .challenger,
+  .champ{
+    45%width:
+  }
+
+}

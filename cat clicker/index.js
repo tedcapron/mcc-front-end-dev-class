@@ -25,8 +25,6 @@ function cheer() {
 }
 var c = 1
 
-alert("unlike life you get to choose the winners here. click on your choice for best cat. pick more from the drop down menu ")
-
 // Model
 const model = {
   currentCat: null,
@@ -93,7 +91,7 @@ const model = {
 };
 
 // Octopus
-const octopus = {
+const controller = {
   init() {
     // Set current cat to first one in the list
     model.currentCat = model.cats[0];
@@ -158,16 +156,16 @@ const catView = {
     this.cat2ImgEl = document.querySelector('.cat2-img');
 
     // on click, increment cat's counter
-    this.catImgEl.addEventListener('click', e => octopus.incrementCounter2());
-    this.cat2ImgEl.addEventListener('click', e => octopus.incrementCounter());
+    this.catImgEl.addEventListener('click', e => controller.incrementCounter2());
+    this.cat2ImgEl.addEventListener('click', e => controller.incrementCounter());
 
     // render this view (update DOM elements)
     this.render();
   },
   render() {
     // update DOM elements with values from current cat
-    const currentCat = octopus.currentCat;
-    const currentCat2 = octopus.currentCat2;
+    const currentCat = controller.currentCat;
+    const currentCat2 = controller.currentCat2;
     this.countEl.innerText = currentCat.clickCount;
     this.catNameEl.innerText = currentCat.name;
     this.catNameEl.innerText = currentCat2.name;
@@ -184,12 +182,12 @@ const catListView = {
     this.catListEl = document.getElementById('cat-list');
 
     // get the cats from the octopus
-    this.cats = octopus.cats;
+    this.cats = controller.cats;
 
     // add listener on select to change current cat and render
     this.catListEl.addEventListener('change', e => {
       const cat = this.cats.find(cat => cat.name === e.target.value);
-      octopus.currentCat = cat;
+      controller.currentCat = cat;
       catView.render();
       punch();
       
@@ -201,10 +199,10 @@ const catListView = {
 
   render() {
     // get the cats from the octopus
-    this.cats = octopus.cats;
+    this.cats = controller.cats;
 
     // empty the cat list
-    this.catListEl.innerHTML = octopus.currentCat.name;
+    this.catListEl.innerHTML = controller.currentCat.name;
 
     // loop over cats
     for (const cat of this.cats) {
@@ -226,4 +224,4 @@ const adminView = {
   render() {}
 };
 
-octopus.init();
+controller.init();
