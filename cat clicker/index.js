@@ -224,4 +224,8 @@ const adminView = {
   render() {}
 };
 
+<<<<<<< HEAD
 controller.init();
+=======
+octopus.init();
+>>>>>>> 2bd8f32e6c14e2ea51f3aeb7726594208a6198a7
