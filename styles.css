@@ -38,29 +38,33 @@ a:active
 .grad {
   box-shadow: 10px 20px 14px rgba(0, 0, 99, .5);
   margin: 20px;
-  min-height: 400px;
   position: relative;
+  /* top: 10vh; */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 40vw;
+  height: 50vh;
   /*
     fixed = parallax
     scroll = normal
   */
   background-attachment: fixed;
 }
+.photo{
+  height: 25vh;
+  margin-bottom: 8vh; 
+}
 
 .card {
-  max-width: 500px;
+  height:25vh;
   text-align: center;
   border-bottom: 4px darkgray;
   border-radius: 6px;
   transition: all .5s;
   display: inline-block;
-  margin-top: 60px;
+  top: 10px; */
     text-decoration: none;
-    padding-bottom: 80px;
+    /* padding-bottom: 80px; */
 
 }
 
@@ -84,10 +88,10 @@ ul.skills {
 .skills li {
   list-style-type: none;
   border-radius: 90px;
-  padding: 15px 30px 25px 30px;
+  padding: 10px 10px 10px 10px;
   margin: 12px;
   border-width: 2 solid;
-  font-size: x-large;
+  font-size: medium;
   box-shadow: 1px 2px 14px rgba(0, 0, 0, .5);
   background-image: linear-gradient(to top,#808080, #CDD5DB );
 
@@ -102,6 +106,8 @@ ul.skills {
   display: inline-block;
   border: 3px solid black;
   box-shadow: 1px 2px 14px rgba(0, 0, 0, .5);
+  height:25vh;
+  top: 10px;
   
 }
 
