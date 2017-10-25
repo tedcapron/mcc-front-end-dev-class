@@ -16,58 +16,56 @@ function test() {
 };
 
 ////////thumb selector//////
-function picSelect(e) {
-  console.log('picselect');
-  var clk = document.getElementById('alt1').addEventListener('click', function (e) {
+
+////////thumb selector//////
+function picSelect(e){
+  var clk=document.getElementById('alt1').addEventListener('click', function(e){
     e.preventDefault();
-    var x = e.target.href;
+    var x=e.target.href;
     modview(x);
 
-  });
+}
+);
 };
 
 
 /////////search box function///////
 function mySearch() {
-  console.log('my search');
-  let lkfor = document.getElementById('search').addEventListener('keyup', textlog);
-
-  function textlog(e) {
-    if (e.enterKey || '') {
-      console.log('press')
-    }
-    var xm = e.target.value;
-    for (var c = 0; c < count; c++) {
-      const cnt = model.pictures[c].keyword.length;
-      for (var v = 0; v <= cnt; v++) {
-        if (xm.includes(model.pictures[c].keyword[v])) {
-          // console.log(xm + " equals " + model.pictures[c].keyword[v]);
-          document.getElementById("search").innerHTML = model.pictures[c].keyword[v];
-          model.pictures[c].bool = "true";
-          console.log(model.pictures[c].bool);
-          myview();
-
-        } else {
-          model.pictures[c].bool = "false";
+    let lkfor = document.getElementById('search').addEventListener('keyup',textlog);
+  function textlog(e){
+      if(e.enterKey|| ''){console.log('press')}
+      var xm=e.target.value;
+      for (var c = 0; c < model.pictures.length; c++) {
+        const cnt = model.pictures[c].keyword.length;
+        for (var v = 0; v <= cnt; v++) {
+          if (xm.includes(model.pictures[c].keyword[v])) {
+            // console.log(xm + " equals " + model.pictures[c].keyword[v]);
+            document.getElementById("search").innerHTML = model.pictures[c].keyword[v];
+            model.pictures[c].bool = "true";
+            console.log(model.pictures[c].bool);
+            myview();
+            
+          } else {
+            model.pictures[c].bool = "false";
+          
+          };
 
         };
-
       };
     };
+
   };
 
-};
-
-//////////thumbnail view////////
+//////////creates wrapper div////////
 function myview() {
   console.log('myview');
   var ed = document.createElement("div");
   document.body.appendChild(ed);
   ed.className = "wrapper";
 
-  for (var x = 0; x < model.pictures.length; x++) {
+  ////creates thumbs//////
+  for (var x = 0; x < count; x++) {
     const link = model.pictures[x].src;
-    ////creates thumbs//////
     pic = document.createElement("a");
     pic.className = "thumbs";
     ed.appendChild(pic);
@@ -76,28 +74,22 @@ function myview() {
     const path = model.pictures[x].thumbsrc;
     pic.style.backgroundImage = `url(${path})`;
     pic.setAttribute("href", `${link}`);
-    
+test();
+    //////// removes pictures ////////
+    const del=document.getElementById("wrapper");
     if (model.pictures[x].bool != "true") {
-      console.log('.....')
-       ed.removeChild(pic);
+      console.log('.....');
+      for (var x = 0; x < count; x++) {
+      del.firstElementChild.remove;
+       
     };
   };
+};
 };
 mySearch();
 
 
-//////removes pictures from display///////
-function todel() {
-  console.log('todel');
-  const wrp = document.getElementById("bkg")
-  for (var x = 0; x < model.pictures.length; x++) {
-    if (model.pictures[x].bool == "true") {
-      document.querySelector("#lft").remove();
-      // console.log(tdel);
-      // wrp.removeChild(tdel);
-    };
-  };
-};
+
 
 ///////////////////  modal contols  ////////////
 function modal() {
@@ -137,10 +129,10 @@ function unhide(){
 
 
 /////modal viewer/////
-function modview(j) {
+function modview(path) {
   console.log('modview');
     const md = document.getElementById("modal");
-    const path = j;
+    // const path = j;
     md.style.backgroundImage = `url(${path})`;
     md.setAttribute("class", "modalView");
     document.getElementById("modal").src = model.pictures[0].src;
