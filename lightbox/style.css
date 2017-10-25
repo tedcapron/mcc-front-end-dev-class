@@ -166,6 +166,8 @@ display: inline-grid;
 background-repeat: no-repeat;
 box-shadow: 5px 5px 5px gray;
 border-radius: 15px;
+cursor: pointer;
+
 /* position: relative;    */
 }
 .thumbs:hover{

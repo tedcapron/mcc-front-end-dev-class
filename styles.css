@@ -8,21 +8,51 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  margin: 0,auto;
   font-family: Courier New, Courier, monospace;
   color: black;
-  background-color:#A68084;
+  background-color:rgb(241, 233, 234);
+}
+.main-nav {
+  width: 100%;
+  height: 5vh;
+  background: rgb(134, 128, 128);
+  /* min-height: 30px; */
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+  box-shadow: 5px 5px 5px gray;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0 auto;
+  /* padding: 0; */
+}
+
+.nav li {
+  padding: 5px 10px 10px 10px;
+}
+.nav a {
+  transition: all .5s;
+}
+.nav a:hover {
+  color: rgb(21, 18, 218)
 }
 
 a {
-  color:#CDD5DB;
+  color:rgb(194, 204, 211);
 }
 a li{
     text-decoration: none;
+    
 
 }
 
 a:hover {
-  color: red;
+  color: rgb(21, 18, 218);
 }
 a:active
 {
@@ -37,41 +67,58 @@ a:active
 
 .grad {
   box-shadow: 10px 20px 14px rgba(0, 0, 99, .5);
-  margin: 20px;
-  position: relative;
+  /* margin: 20px; */
+  /* position: relative; */
   /* top: 10vh; */
-  background-position: center;
+  /* background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   height: 50vh;
-
+background-color: rgb(176, 181, 189);
+justify-content: space-around
   /*
     fixed = parallax
     scroll = normal
   */
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
-.photo{
+/* .photo{
   height: 25vh;
   margin-bottom: 8vh; 
+  top: 15vh;
+} */
+
+.pic {
+  display: inline-block;
+  /* border: 3px solid black; */
+  box-shadow: 7px 7px 14px rgba(0, 0, 0, .5);
+  height:35vh;
+  width:25vw ;
+  /* top: 25vh; */
+  /* position: relative; */
+  background-image: url("images/ted.jpg");
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 9vh;
+
+  
+  
 }
 
 .card {
   height:25vh;
   text-align: center;
-  border-bottom: 4px darkgray;
+  border-bottom: 4px rgb(97, 92, 92);
   border-radius: 6px;
   transition: all .5s;
   display: inline-block;
-  top: 10px; */
+  top: 7vw; 
     text-decoration: none;
-    /* padding-bottom: 80px; */
+    
+    }
 
-}
-
-.card:hover {
-  color: red;
-}
 
 ul.skills {
   padding-top: 0;
@@ -80,52 +127,38 @@ ul.skills {
 
 .skills {
   transition: all .5s;
+  
 }
 
 .skills:hover {
-  color: red
+  color: rgb(21, 18, 218);
 }
 
 .skills li {
   list-style-type: none;
   border-radius: 90px;
-  padding: 10px 10px 10px 10px;
-  margin: 12px;
-  border-width: 2 solid;
-  font-size: medium;
-  box-shadow: 1px 2px 14px rgba(0, 0, 0, .5);
-  background-image: linear-gradient(to top,#808080, #CDD5DB );
-
+  padding: 10px;
+  margin: .5em;
+  border-width: 2 solid black ;
+  font-size: 1em;
+  box-shadow: 7px 7px 14px rgba(0, 0, 0, .5);
+  background-image: linear-gradient(to top,#524747, #CDD5DB );
   
 }
 
-.skills li:hover {
-  color: white;
-}
 
-.pic {
-  display: inline-block;
-  border: 3px solid black;
-  box-shadow: 1px 2px 14px rgba(0, 0, 0, .5);
-  height:25vh;
-  top: 10px;
-  
-}
 
 .pimg1,
 .pimg2,
 .pimg3,
 .pimg4, 
 .pimg5{
+  height: 49vh;
   position: relative;
   opacity: 0.70;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /*
-    fixed = parallax
-    scroll = normal
-  */
   background-attachment: fixed;
 }
 
@@ -155,23 +188,35 @@ ul.skills {
 }
 
 .section-white {
-  background-color: lightgray color: black;
+  background-color: lightgray ;
   border: 2px solid black; 
+  height: 49vh;
+  
 }
 
 .section-light {
   background-color: white;
+  border: 2px solid black; 
+  
   color: #666;
+  height: 49vh;
 }
 
 .section-med {
   background-color: gray;
+  border: 2px solid black; 
+  
   color: oldlace;
+  height: 49vh;
+  
 }
 
 .section-dark {
   background-color: #282e34;
+  border: 2px solid white;   
   color: WHITE;
+  height: 49vh;
+  
 }
 
 .ptext {
@@ -180,15 +225,15 @@ ul.skills {
   width: 100%;
   text-align: center;
   color: #000;
-  font-size: 27px;
-  letter-spacing: 8px;
+  font-size: 2em;
+  letter-spacing: .5em;
   text-transform: uppercase;
 }
 
 .ptext .border {
   background-color: #111;
   color: #fff;
-  padding: 20px;
+  padding: 1.5em;
 }
 
 .ptext .border.trans {
@@ -196,9 +241,21 @@ ul.skills {
 }
 
 @media(max-width:568px) {
+  .card{
+    height: 20vh;
+    display: block;
+  }
+  .pic{
+/* display: none; */
+width: 10vw;
+height: 10vh;
+
+  }
   .pimg1,
   .pimg2,
-  .pimg3 {
+  .pimg3,
+  .pimg4,
+  .pimg5 {
     background-attachment: scroll;
   }
 }
