@@ -12,6 +12,9 @@ body {
   font-family: Courier New, Courier, monospace;
   color: black;
   background-color: rgb(241, 233, 234);
+  
+  
+
 }
 
 .main-nav {
@@ -199,8 +202,13 @@ a.section-light {
     height: 20vh;
     display: block;
   }
+  .grad{
+    display: block;
+    height: 100vh;
+  }
   .pic {
-    /* display: none; */
+    
+    
     width: 25vw;
     height: 15vh;
   }
@@ -209,12 +217,13 @@ a.section-light {
     height: 20vh;
   }
   .skills li {
+    display: block;  
+    align-content: center;  
     list-style-type: none;
     border-radius: none;
     padding: 1px;
-    /* margin: .5em; */
     border-width: none;
-    font-size: .5em;
+    font-size: 1.5em;
     box-shadow: none;
     background-image: none;
   }
