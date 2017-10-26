@@ -43,19 +43,25 @@ body {
 }
 
 .nav a:hover {
-  color: rgb(21, 18, 218)
+  color: rgb(21,18, 218);
+  font-size: 1.3em;
+  text-shadow: none;
 }
 
 a {
-  color: rgb(194, 204, 211);
+  color: white;
+  text-shadow: 3px 3px black; 
 }
 
-a li {
-  text-decoration: none;
+
+a {
+  transition: all .5s;
 }
 
 a:hover {
   color: rgb(21, 18, 218);
+  font-size: 1.3em;
+  text-shadow: none; 
 }
 
 .grad {
@@ -67,7 +73,7 @@ a:hover {
   justify-content: space-around;
   display: grid;
   grid-template-columns: 1fr 1fr; 
-  padding-top: 17vh;
+  padding-top: 10vh;
 }
 
 .pic {
@@ -79,34 +85,18 @@ a:hover {
   
 }
 
-.card {
-  height: 35vh;
-  width: 20vw;
-  text-align: center;
-  border-bottom: 4px rgb(223, 18, 18);
-  border-radius: 6px;
-  transition: all .5s;
-  display: inline-block;
-  top: 7vw;
-  text-decoration: none;
-}
-
 #skills {
-  /* vertical-align: middle; */
   justify-content: center;
-  /* display: inline-block; */
+  
 }
 
 #skills li {
-  top: 15vh;
-  /* padding-bottom: 2em; */
   width: 20vw;
   list-style-type: none;
   text-decoration: none;
   border-radius: 10px;
   padding: 10px;
-  /* margin: .5em; */
-  /* font-size: .8em; */
+  font-size: 1em;
   box-shadow: 7px 7px 7px rgba(0, 0, 0, .5);
   background-image: linear-gradient(to top, #524747, #CDD5DB);
 }
@@ -192,6 +182,7 @@ a.section-light {
   font-size: 2em;
   letter-spacing: .5em;
   text-transform: uppercase;
+  text-shadow:3px 3px black;
 }
 
 .ptext .border {
@@ -207,6 +198,16 @@ a.section-light {
 .pic{
   width:40vw;
 }
+.nomo{
+  display: none;
+}
+#ass4{
+  display: none;
+}
+.pimg4{
+  display: none;
+}
+
 
 }
 
@@ -225,10 +226,7 @@ a.section-light {
     width: 50vw;
     height: 30vh;
   }
-  .card {
-    display: block;
-    height: 20vh;
-  }
+  
   #skills li {
     width: 90vw;
     /* justify-content: center;  */
@@ -237,16 +235,20 @@ a.section-light {
     padding: .5em;
     border-width: none;
     margin-right: 10vw;
+    font-size: 1.3em;
   }
-  a {
-    color: rgb(231, 93, 93);
+  .nomo{
+    display: none;
   }
+h2{
+  font-size: .5em;
+}
   .ptext{
     font-size: 1em;
 
   }
   .section{
-    font-size: .5em;
+    font-size: .8em;
   }
   .pimg1,
   .pimg2,
