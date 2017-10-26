@@ -24,7 +24,7 @@ body {
   padding: 5px;
   position: fixed;
   text-align: center;
-  box-shadow: 5px 5px 5px gray;
+  box-shadow: 5px 5px 5px gray; 
 }
 
 .nav {
@@ -59,25 +59,29 @@ a:hover {
 }
 
 .grad {
+  vertical-align: middle;
   box-shadow: 10px 20px 14px rgba(0, 0, 99, .5);
   height: 55vh;
   width: 100vw;
   background-color: rgb(176, 181, 189);
   justify-content: space-around;
-  display: inline-block;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  padding-top: 17vh;
 }
 
 .pic {
-  display: inline-block;
+  margin-left: 20vw;
   box-shadow: 7px 7px 14px rgba(0, 0, 0, .5);
   height: 35vh;
   width: 25vw;
-  justify-content: center;
-  margin-top: 10vh;
+  border-radius: 10px;
+  
 }
 
 .card {
   height: 35vh;
+  width: 20vw;
   text-align: center;
   border-bottom: 4px rgb(223, 18, 18);
   border-radius: 6px;
@@ -87,20 +91,23 @@ a:hover {
   text-decoration: none;
 }
 
-.skills {
-  display: inline-block;
+#skills {
+  /* vertical-align: middle; */
+  justify-content: center;
+  /* display: inline-block; */
 }
 
-.skills li {
+#skills li {
   top: 15vh;
-  padding-bottom: 2em;
+  /* padding-bottom: 2em; */
+  width: 20vw;
   list-style-type: none;
   text-decoration: none;
-  border-radius: 90px;
+  border-radius: 10px;
   padding: 10px;
-  margin: .5em;
-  font-size: .8em;
-  box-shadow: 7px 7px 14px rgba(0, 0, 0, .5);
+  /* margin: .5em; */
+  /* font-size: .8em; */
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, .5);
   background-image: linear-gradient(to top, #524747, #CDD5DB);
 }
 
@@ -122,19 +129,19 @@ a:hover {
   background-attachment: fixed;
 }
 
-.pimg2 {
+.pimg1 {
   background-image: url("images/image3.jpg");
 }
 
-.pimg3 {
+.pimg2 {
   background-image: url("images/devices.jpg");
 }
 
-.pimg4 {
-  background-image: url("images/image4.jpeg");
+.pimg3 {
+  background-image: url("images/code.png");
 }
 
-.pimg5 {
+.pimg4 {
   background-image: url("images/image5.jpg");
 }
 
@@ -196,6 +203,12 @@ a.section-light {
 .ptext .border.trans {
   background-color: transparent;
 }
+@media(max-width:768px){
+.pic{
+  width:40vw;
+}
+
+}
 
 @media(max-width:568px) {
   .card {
@@ -203,29 +216,27 @@ a.section-light {
     display: block;
   }
   .grad{
-    display: block;
+    grid-template-columns: 1fr;
     height: 100vh;
   }
   .pic {
     
-    
-    width: 25vw;
-    height: 15vh;
+    margin-left: 30vw;
+    width: 50vw;
+    height: 30vh;
   }
   .card {
     display: block;
     height: 20vh;
   }
-  .skills li {
-    display: block;  
-    align-content: center;  
+  #skills li {
+    width: 90vw;
+    /* justify-content: center;  */
     list-style-type: none;
     border-radius: none;
-    padding: 1px;
+    padding: .5em;
     border-width: none;
-    font-size: 1.5em;
-    box-shadow: none;
-    background-image: none;
+    margin-right: 10vw;
   }
   a {
     color: rgb(231, 93, 93);
@@ -234,14 +245,19 @@ a.section-light {
     font-size: 1em;
 
   }
+  .section{
+    font-size: .5em;
+  }
   .pimg1,
   .pimg2,
   .pimg3,
-  .pimg4,
   .pimg5 {
     background-attachment: scroll;
   }
-  #ass5{
+  #ass4{
+    display: none;
+  }
+  .pimg4{
     display: none;
   }
 }
