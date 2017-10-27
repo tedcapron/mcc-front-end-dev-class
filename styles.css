@@ -12,19 +12,17 @@ body {
   font-family: Courier New, Courier, monospace;
   color: black;
   background-color: rgb(241, 233, 234);
-  
-  
-
 }
 
 .main-nav {
-  width: 100%;
+  width: 100vw;
   height: 5vh;
   background: rgb(134, 128, 128);
   padding: 5px;
   position: fixed;
   text-align: center;
-  box-shadow: 5px 5px 5px gray; 
+  box-shadow: 5px 5px 5px gray;
+  
 }
 
 .nav {
@@ -35,7 +33,7 @@ body {
 
 .nav li {
   top: 3px;
-  padding: 1px 10px 20px 1px;
+  padding: 1px 30px 20px 1px;
 }
 
 .nav a {
@@ -43,16 +41,15 @@ body {
 }
 
 .nav a:hover {
-  color: rgb(21,18, 218);
+  color: rgb(21, 18, 218);
   font-size: 1.3em;
   text-shadow: none;
 }
 
 a {
   color: white;
-  text-shadow: 3px 3px black; 
+  text-shadow: 3px 3px black;
 }
-
 
 a {
   transition: all .5s;
@@ -61,7 +58,7 @@ a {
 a:hover {
   color: rgb(21, 18, 218);
   font-size: 1.3em;
-  text-shadow: none; 
+  text-shadow: none;
 }
 
 .grad {
@@ -72,7 +69,7 @@ a:hover {
   background-color: rgb(176, 181, 189);
   justify-content: space-around;
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr;
   padding-top: 10vh;
 }
 
@@ -82,12 +79,10 @@ a:hover {
   height: 35vh;
   width: 25vw;
   border-radius: 10px;
-  
 }
 
 #skills {
   justify-content: center;
-  
 }
 
 #skills li {
@@ -95,7 +90,7 @@ a:hover {
   list-style-type: none;
   text-decoration: none;
   border-radius: 10px;
-  padding: 10px;
+  padding: .75vw;
   font-size: 1em;
   box-shadow: 7px 7px 7px rgba(0, 0, 0, .5);
   background-image: linear-gradient(to top, #524747, #CDD5DB);
@@ -161,8 +156,8 @@ a.section-light {
 
 .section-med {
   background-color: gray;
-  border: 2px solid black;  color: oldlace;
-
+  border: 2px solid black;
+  color: oldlace;
   height: 49vh;
 }
 
@@ -177,12 +172,12 @@ a.section-light {
   position: absolute;
   top: 50%;
   width: 100%;
-  text-align: center;
+  text-align: justify;
   color: #000;
   font-size: 2em;
   letter-spacing: .5em;
   text-transform: uppercase;
-  text-shadow:3px 3px black;
+  text-shadow: 3px 3px black;
 }
 
 .ptext .border {
@@ -194,21 +189,20 @@ a.section-light {
 .ptext .border.trans {
   background-color: transparent;
 }
-@media(max-width:768px){
-.pic{
-  width:40vw;
-}
-.nomo{
-  display: none;
-}
-#ass4{
-  display: none;
-}
-.pimg4{
-  display: none;
-}
 
-
+@media(max-width:768px) {
+  .pic {
+    width: 40vw;
+  }
+  .nomo {
+    display: none;
+  }
+  #ass4 {
+    display: none;
+  }
+  .pimg4 {
+    display: none;
+  }
 }
 
 @media(max-width:568px) {
@@ -216,17 +210,15 @@ a.section-light {
     height: 20vh;
     display: block;
   }
-  .grad{
+  .grad {
     grid-template-columns: 1fr;
     height: 100vh;
   }
   .pic {
-    
     margin-left: 30vw;
     width: 50vw;
     height: 30vh;
   }
-  
   #skills li {
     width: 90vw;
     /* justify-content: center;  */
@@ -237,17 +229,17 @@ a.section-light {
     margin-right: 10vw;
     font-size: 1.3em;
   }
-  .nomo{
+  .nomo {
     display: none;
   }
-h2{
-  font-size: .5em;
-}
-  .ptext{
-    font-size: 1em;
-
+  h2 {
+    font-size: .5em;
   }
-  .section{
+  .ptext {
+    font-size: 1.5em;
+    text-shadow: none;
+  }
+  .section {
     font-size: .8em;
   }
   .pimg1,
@@ -256,10 +248,10 @@ h2{
   .pimg5 {
     background-attachment: scroll;
   }
-  #ass4{
+  #ass4 {
     display: none;
   }
-  .pimg4{
+  .pimg4 {
     display: none;
   }
 }

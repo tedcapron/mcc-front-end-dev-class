@@ -4,7 +4,7 @@
 }
   
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   text-align: center;
   font-family: 'Roboto', sans-serif;
@@ -24,12 +24,10 @@ a:hover {
 /* Section Styles */
 
 .main-nav {
-  width: 100%;
+  width: 100vw;
   background: black;
-  min-height: 30px;
-  padding: 10px;
   position: fixed;
-  text-align: center;
+  
 }
 .nav {
   display: flex;
@@ -56,51 +54,44 @@ a:hover {
 }
 
 header {
-  text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
-  background-size: cover;
-  overflow: hidden;
+  display: block;
+  align-content: center;
   padding-top: 60px;
-}
-header {
   line-height: 1.5;
+  justify-content: center;
 }
-header .profile-image {
-  margin-top: 50px;
-  margin-bottom: 5px;
+.profile {
+  background-image: url("../images/anakin2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  padding: 20vh;
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid lightcyan;
-  transition: all .5s;
+  transition: all 3s;
 }
-header .profile-image:hover {
-  transform: scale(1.6) rotate(360deg);
+ .profile:hover {
+   align-content: center;
+  background-image: url("../images/me.jpg");
+  
 }
-.tag {
-  background-color: black;
-  color: yellow;
-  padding: 10px;
-  border-radius: 5px ;
-  display: table;
-  margin: 10px auto;
-} 
-.location {
-  background-color: black;
-  color: yellow;
-  perspective: 100px;
+
+
+.main{
+  display: grid;
+  grid-template-columns: 1fr;
 }
-.card {
-  margin: 30px;
-  padding: 20px 40px 40px;
-  min-width:450px;
-  max-width: 500px;
-  min-width 500px;
-  text-align: center;
-  background:black;
-  border-bottom: 4px;
-  border-radius: 6px;
-  transition: all .5s;
+
+.big{
+  font-size: 3em;
+  font-weight: 1000;
+}
+.small{
+  font-size: .5em;
+}
+.tiny{
+  font-size: .25em;
 }
 .card:hover {
   color:red;
@@ -112,25 +103,6 @@ ul.skills {
 }
 .skills{ transition: all .5s;} 
 .skills:hover {color: red}
-.skills li {
-  list-style-type: none;
-  border-radius: 90px;
-  background:lightcyan;
-  color:black;
-  padding: 5px 10px;
-  margin: 2px;
-  border-width: 2 solid;
-  font-size: x-large;
-  border-bottom-color: lightcyan;
-}
-
-
-}
-
-.skills li:nth-child(odd) {
-  color: lightcyan;
-  background:black;
-}
 
 footer {
   width: 100%;
@@ -182,14 +154,6 @@ a.social:hover {
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
   
-  .flex {
-      display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex; 
-      max-width: 1200px;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
-      margin: 0 auto;
-  }
 
   header {
     min-height: 470px;
@@ -201,8 +165,8 @@ a.social:hover {
   }
 
 
-  main {
-    padding-top: 20px;
+  .main {
+    grid-template-columns: 1fr 1fr;
   }
 
   main p {
@@ -215,16 +179,6 @@ a.social:hover {
     margin: 40px auto;
   }
 
-}
-#div1 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    margin: 50px;
-    padding: 10px;
-    border: 1px solid black;
-    -webkit-perspective: 150px; /* Chrome, Safari, Opera  */
-    perspective: 150px;
 }
 
 #div2 {
