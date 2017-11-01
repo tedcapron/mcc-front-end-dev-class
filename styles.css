@@ -15,7 +15,7 @@ body {
 }
 
 .main-nav {
-  width: 100vw;
+  width: 95vw;
   height: 5vh;
   background: rgb(134, 128, 128);
   padding: 5px;
@@ -65,7 +65,7 @@ a:hover {
   vertical-align: middle;
   box-shadow: 5px 5px 5px rgba(0, 0, 99, .5);
   height: 55vh;
-  width: 98vw;
+  width: 95vw;
   background-color: rgb(176, 181, 189);
   justify-content: space-around;
   display: grid;
@@ -172,7 +172,8 @@ a.section-light {
   position: absolute;
   top: 50%;
   width: 100%;
-  text-align: justify;
+  text-align: center;
+  vertical-align: middle;
   color: #000;
   font-size: 2em;
   letter-spacing: .5em;
@@ -236,8 +237,9 @@ a.section-light {
     font-size: .5em;
   }
   .ptext {
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-shadow: none;
+    text-align: center;
   }
   .section {
     font-size: .8em;
