@@ -70,23 +70,13 @@ right: 0;
 background-color:black;
 color: white;
 }
-.invis{
-display: none;
-visibility: hidden;
-
-};
-vis{
-    display:inherit;
-    visibility: visible;
-    
-    };
 
 
     #story{
     position: absolute;
     display:block;
     color: white;
-    bottom: 30%;
+    bottom: 34vw;
     text-align: center;
     width: 100%;
     z-index: 9999;
@@ -112,14 +102,15 @@ modal{
     right: 0;
     overflow: auto;
     background-color: rgba(0,0,0, 0.5);
-    background-size: cover;
+    display: inline-block;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 #modal{
     /* z-index: ; */
     /* background-color: #f4f4f4; */
     width: 80%;
-    height: 90%;
+    height: 100%;
     margin: 20% 10% 20% 10%;
     justify-content: center;
     position: absolute
@@ -246,16 +237,4 @@ h1 {
         height: 150%;
         /* z-index: 99; */
         }
-        #story{
-            position: absolute;
-            display:block;
-            color: white;
-            bottom: 30%;
-            text-align: center;
-            width: 100%;
-            z-index: 9999;
-            
-            
-            
-            }
  

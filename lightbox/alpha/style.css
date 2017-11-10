@@ -246,16 +246,4 @@ h1 {
         height: 150%;
         /* z-index: 99; */
         }
-        #story{
-            position: absolute;
-            display:block;
-            color: white;
-            bottom: 30%;
-            text-align: center;
-            width: 100%;
-            z-index: 9999;
-            
-            
-            
-            }
  

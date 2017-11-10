@@ -1,33 +1,39 @@
 console.log('js loaded');
 var io = 1;
+var vi;
 let a;
-var pictureIndexNumber = 0;///current picture index number////
+var btn;
+var j = 0;
+var xm;
+var t = 123;
 var pic;
+var condition = 0;
 var count = model.pictures.length;
+var ed = "";
+var searcher = "";
 var view = [];
 var octopus = [];
 octopus.push(...model.pictures);
 view.push(...octopus);
 
+
 thumbMaker();
 picSelect();
 modalControls();
-mySearch();
-
 function test(t) {
   console.log('testing...' + t);
 };
 
-//////////creates wrapper div and thumbs////////
+//////////creates wrapper div////////
 function thumbMaker() {
-  myDiv = document.createElement("div");
-  document.body.appendChild(myDiv);
-  myDiv.className = "wrapper";
+  ed = document.createElement("div");
+  document.body.appendChild(ed);
+  ed.className = "wrapper"; 
   for (var x = 0; x < view.length; x++) {
     const link = view[x].src;
     pic = document.createElement("a");
     pic.className = "thumbs";
-    myDiv.appendChild(pic);
+    ed.appendChild(pic);
     pic.setAttribute("id", `alt${x}`);
     document.getElementById(`alt${x}`).innerText = octopus[x].story;
     const path = view[x].thumbsrc;
@@ -44,9 +50,10 @@ function picSelect(e) {
   for (let z = 0; z < count; z = z + 1) {
     // test(z);
     clk = document.getElementById(`alt${z}`).addEventListener('click', function (e) {
+      test(clk);
       e.preventDefault();
       var x = e.target.href;
-      pictureIndexNumber = urlToNumber(x)-1;
+      j = urlToNumber(x);
       modview(x);
     });
   };
@@ -64,37 +71,47 @@ function urlToNumber(q) {
 };
 ////////////////////////////////my search//////////////////////
 function mySearch() {
-  document.addEventListener('keyup', function () {
+  document.addEventListener('keypress', function () {
     searchResult = document.getElementById('search').value;
     var x = 0;
-    onOff = 1
+    onOff = 1    
     for (x in octopus) {
-      var plural=searchResult.concat('s');
       var story = octopus[x].story;
       var altText = octopus[x].alt;
       var storyArray = story.split(' ');
-      var altTextArray = altText.split(' ');
+      var altTextArray=altText.split(' ');
       var firstLetter = searchResult.charCodeAt(0);
-
+      
       var image = document.getElementById(`alt${x}`);
-      var c = 0;
+      var c=0;
       for (c in storyArray) {
-        if (storyArray.includes(searchResult) || searchResult == '') {
-          image.setAttribute("class", "thumbs");
-        } else if (altTextArray.includes(searchResult)) {
-          image.setAttribute("class", "thumbs");
-      } else if (altTextArray.includes(plural)) {
-        image.setAttribute("class", "thumbs");
-      }
-      else if (storyArray.includes(plural)) {
-        image.setAttribute("class", "thumbs");
-      }
-          
-        else {
-          image.setAttribute("class", "invis");
-          onOff = 0
+      if( storyArray.includes(searchResult)|| searchResult == ''){test('booyah')
+      image.setAttribute("class", "thumbs");
+    }
+    else if( altTextArray.includes(searchResult)){test('booyah')
+    image.setAttribute("class", "thumbs");
+  }
 
-        };
+    else {
+      image.setAttribute("class", "invis");
+onOff=0
+
+    };
+      // let storylength=storyArray.length;
+      //   var word = story[c]
+      //   // test(word,searchResult);
+      //   let onOff = 0;
+
+      //   if (word != searchResult && onOff == 0) {
+      //     //  test(c);
+          
+      //   };
+      //   if (word == searchResult || searchResult == '') {
+          
+      //     test('xxx...' + x);
+
+
+      //   }
       };
     };
   })
@@ -108,8 +125,8 @@ function modview(path) {
   const md = document.getElementById("modal");
   md.style.backgroundImage = `url(${path})`;
   md.setAttribute("class", "modalView");
-  document.getElementById("modal").src = octopus[pictureIndexNumber].src;
-  document.getElementById("story").innerText = octopus[pictureIndexNumber].story;
+  document.getElementById("modal").src = octopus[j].src;
+  document.getElementById("story").innerText = octopus[j].story;
   unhide()
 };
 
@@ -123,19 +140,21 @@ function unhide() {
     };
   };
   io = 0;
+  condition = 1;
 
 };
 
 ///////////////////  modal key contols  ////////////
-
 document.onkeydown = checkKey;
-
 function checkKey(ke) {
   ke = window.event;
+  // test('key');
   if (ke.keyCode == '37') {
     goback();
   } else if (ke.keyCode == '39') {
     goforward();
+  } else {
+    var btn = 0;
   };
 };
 //////////// modal onscreen controls ////////
@@ -160,23 +179,23 @@ function modalControls(a) {
 
 
 function goback() {
-  if (pictureIndexNumber < 1) {
-    pictureIndexNumber = count;
-    test('b' + pictureIndexNumber);
+  j = j - 1;
+  if (j < 1) {
+    j = count;
+    test('b' + j);
   };
-  pictureIndexNumber = pictureIndexNumber - 1;
-  a = octopus[pictureIndexNumber].src;
+  a = octopus[j].src;
   modview(a);
 };
 
 
 function goforward() {
+  j = j + 1;
   // test(j);
-  if (pictureIndexNumber >= count - 1) {
-    pictureIndexNumber = -1
+  if (j >= count) {
+    j = 0
   };
-  pictureIndexNumber = pictureIndexNumber + 1;
-  var a = octopus[pictureIndexNumber].src;
+  var a = octopus[j].src;
   modview(a);
 
 };
@@ -194,5 +213,6 @@ function modclose() {
     io = 1;
 
   };
-  
+  var condition = 0
 };
+
