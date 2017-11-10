@@ -180,8 +180,8 @@ cursor: pointer;
 }
 .thumbs:hover{
     transition-duration: 1s;
-    width: 110%;
-    height: 110%;
+    width: 100vw;
+    height: 100vh;
     color:black;
     visibility: visible;
     opacity: 70%;
@@ -253,9 +253,22 @@ h1 {
             bottom: 30%;
             text-align: center;
             width: 100%;
-            z-index: 9999;
-            
-            
-            
+            z-index: 9999;}
+
+            .thumbs:hover{
+                transition-duration: 1s;
+                width: 110%;
+                height: 110%;
+                color:black;
+                visibility: visible;
+                opacity: 70%;
+                z-index: 2;
+                background-repeat: no-repeat;
+                background-size: cover;
+                text-align: center;
+                text-justify: auto;
+                text-shadow: 2px 2px white;
+                box-shadow: none;
+                border-radius: 12px;
             }
  
