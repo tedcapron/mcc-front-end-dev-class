@@ -112,7 +112,7 @@ function modview(path) {
   md.style.backgroundImage = `url(${path})`;
   md.setAttribute("class", "modalView");
   document.getElementById("modal").src = octopus[pictureIndexNumber].src;
-  document.getElementById("story").innerText = octopus[pictureIndexNumber].story;
+  document.getElementById("modal").innerText = octopus[pictureIndexNumber].story;
   unhide()
 };
 
