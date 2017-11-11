@@ -146,7 +146,7 @@ function modalControls(a) {
   console.log('modalControls');
   io = 0;
   setTimeout(function () {
-    document.addEventListener('press', modclose());
+    document.addEventListener('ontouchstart', modclose());
     document.addEventListener('click', function () {
       e = event.target.id;
       if (e == 'rt') {
