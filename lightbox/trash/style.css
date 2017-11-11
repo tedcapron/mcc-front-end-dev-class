@@ -145,58 +145,44 @@ modal {
 .thumbs {
     z-index: 1;
     color: rgba(0, 0, 0, 0.0);
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border: 2px solid black;
     margin-top: 150px;
     display: inline-grid;
     background-repeat: no-repeat;
-    box-shadow: 5px 5px 5px gray;
+    background-size: cover;
+    box-shadow: 5px 5px 10px gray;
     border-radius: 15px;
     cursor: pointer;
 }
 
-.thumbs:hover {
-    transition-duration: 1s;
-    width: 110%;
-    height: 110%;
-    color: black;
-    visibility: visible;
-    opacity: 70%;
-    z-index: 2;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    text-justify: auto;
-    text-shadow: 2px 2px white;
-    box-shadow: none;
-    border-radius: 12px;
-}
 
+}
 #search {
     width: 50vw;
-    max-width: 400px;
     background-image: url("images/thumb/mag.png");
     background-repeat: no-repeat;
     background-position: right center;
     font-size: 1em;
 }
-
 .icon {
     display: none;
 }
-
 @media screen and (min-width: 768px) {
     .wrapper {
         grid-template-columns: 1fr 1fr;
     }
+
     .hidden:hover {
         width: 150%;
         height: 150%;
     }
+
     h1 {
         display: block;
     }
+
     @media screen and (min-width:1024px) {
         .wrapper {
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -222,4 +208,34 @@ modal {
         .icon:hover {
             color: white;
             background-color: black;
+        }
+        .thumbs:hover {
+            transition-duration: 1s;
+            width: 150%;
+            height: 110%;
+            color: black;
+            visibility: visible;
+            opacity: 70%;
+            z-index: 2;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            text-justify: auto;
+            text-shadow: 2px 2px white;
+            box-shadow: none;
+            border-radius: 12px;
+        }
+        
+        .thumbs {
+            z-index: 1;
+            color: rgba(0, 0, 0, 0.0);
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin-top: 150px;
+            display: inline-grid;
+            background-repeat: no-repeat;
+            box-shadow: 7px 7px 20px rgb(110, 106, 106);
+            border-radius: 15px;
+            cursor: pointer;
         }
