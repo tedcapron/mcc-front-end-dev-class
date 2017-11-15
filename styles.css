@@ -77,10 +77,17 @@ a:hover {
   height: 35vh;
   width: 25vw;
   border-radius: 10px;
+  position: relative;
+  animation-name: mypic;
+  animation-duration: 1s;
 }
 
 #skills {
   justify-content: center;
+  position: relative;
+  animation-name: mylist;
+  animation-duration: 1s;
+  
 }
 
 #skills li {
@@ -97,6 +104,25 @@ a:hover {
 .skills:hover {
   color: rgb(21, 18, 218);
 }
+@keyframes mypic {
+  0% {
+    
+    top: -60vw;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@keyframes mylist {
+  0% {
+    right: -60vw;
+    
+  }
+  100% {
+    right:0vw ;
+  }
+}
+
 
 .pimg1,
 .pimg2,
@@ -205,6 +231,15 @@ a.section-light {
 }
 
 @media(max-width:568px) {
+  #boxer {
+    width: 200px;
+    height: 200px;
+    position: relative;
+   
+  }
+  
+
+  
   .card {
     height: 20vh;
     display: block;
@@ -212,6 +247,7 @@ a.section-light {
   .grad {
     grid-template-columns: 1fr;
     height: 100vh;
+   
   }
   .pic {
     margin-left: 30vw;
@@ -227,6 +263,30 @@ a.section-light {
     border-width: none;
     margin-right: 10vw;
     font-size: 1.3em;
+ 
+  }
+  @keyframes kitty {
+    0% {
+      left: 0px;
+      top: 0px;
+    }
+    25% {
+      left: 150%;
+      ;
+      top: 0px;
+    }
+    50% {
+      left: 150%;
+      top: 0px;
+    }
+    75% {
+      left: 95%;
+      top: 0px;
+    }
+    100% {
+      left: 0px;
+      top: 0px;
+    }
   }
   .nomo {
     display: none;
