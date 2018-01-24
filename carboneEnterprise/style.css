@@ -37,15 +37,16 @@ body{
 }
 .sidebar{
 width: 25vw;
+padding-top: 10vh;
 
 }
 
 #photo {
     width: 75vw;
     height: 80vh;
-    background-image: url("images/image1.JPG");
+    background-image: url("images/image1.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     margin-bottom: 2em;
 }
 
