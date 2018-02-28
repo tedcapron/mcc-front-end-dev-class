@@ -46,8 +46,8 @@ body {
 }
 
 a {
-  color: white;
-  text-shadow: 3px 3px black;
+  color: red;
+  /* text-shadow: 3px 3px black; */
 }
 
 a {
@@ -87,18 +87,24 @@ a:hover {
   position: relative;
   animation-name: mylist;
   animation-duration: 1s;
+  padding-bottom: 3px;
+  
   
 }
 
 #skills li {
-  width: 20vw;
+  width: 15vw;
   list-style-type: none;
   text-decoration: none;
+  border:2px solid black;
+  background-color: white;
   border-radius: 10px;
+  margin-bottom: 4px;
   padding: .75vw;
-  font-size: 1em;
-  box-shadow: 7px 7px 7px rgba(0, 0, 0, .5);
-  background-image: linear-gradient(to top, #524747, #CDD5DB);
+  font-size: .5em;
+  color: black;
+  /* box-shadow: 7px 7px 7px rgba(0, 0, 0, .5); */
+  /* background-image: linear-gradient(to top, #524747, #CDD5DB); */
 }
 
 .skills:hover {
